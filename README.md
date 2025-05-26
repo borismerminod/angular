@@ -1,6 +1,3 @@
-# angular
-angular tutorial
-
 ## 🚀 Installation et création d’un projet Angular
 
 ### 1. 📦 Installation globale de Angular CLI
@@ -55,3 +52,31 @@ ng serve
 ```
 
 Accédez à votre app sur : [http://localhost:4200](http://localhost:4200)
+
+---
+
+### 6. 🔧 Génération d'un composant
+
+Pour générer un nouveau composant Angular :
+
+```bash
+ng generate component nom-du-composant
+```
+
+ou avec l'alias :
+
+```bash
+ng g c nom-du-composant
+```
+
+---
+
+### 7. 📆 Construction du projet (build)
+
+Pour compiler le projet pour la production :
+
+```bash
+ng build
+```
+
+Les fichiers seront générés dans le dossier `dist/`.
