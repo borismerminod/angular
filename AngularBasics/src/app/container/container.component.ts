@@ -1,16 +1,19 @@
 import { Component } from '@angular/core';
 import { SearchComponent } from './search/search.component';
+import { CommonModule} from '@angular/common';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @Component({
-  selector: 'product-list',
-  imports: [SearchComponent],
-  templateUrl: './product-list.component.html',
-  styleUrl: './product-list.component.css'
+  selector: 'app-container',
+  imports: [SearchComponent, CommonModule, ProductListComponent],
+  templateUrl: './container.component.html',
+  styleUrl: './container.component.css'
 })
-export class ProductListComponent {
+export class ContainerComponent {
   name: string = "John Doe"
   addToCart : number = 0
   className: string = "product-list"
+  listOfString:string[] = ["Mark", "Steve", "Marry", "John", "Sara"]
   product = {
     image: 'smartphone.jpeg',
     name:'iPhone X',
