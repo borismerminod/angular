@@ -1,19 +1,11 @@
 <div class="product-container" >
-    <div class="product-item" *ngFor="let prod of products; let i=index">
-        <div class="wishlist-sale-container">
-            <div class="add-to-wish-list">
-                <i class="fa fa-heart-o" aria-hidden="true">{{i}}</i>
-            </div>
-            <div *ngIf="prod.discountPrice" class="on-sale-tag">{{ (100 - prod.discountPrice / prod.price * 100).toFixed(0)}}% OFF</div>   
-        </div>
-        <div class="product-image">
-            <img [src]="prod.imageURL" class="product-image" >
-        </div>
-        <div class="add-to-price">
-            {{prod.price}}
-        </div>
-        <div class="product-name">{{prod.name}}</div>
-        <div class="product-category">{{prod.gender}} . {{prod.category}} . {{prod.brand}}</div>
-        <div class="product-avaible-colors">{{prod.color.length}} . Best Sellet</div>
+    <app-filter 
+        [all]="allProductNumber" 
+        [inStock]="allInStockNumber" 
+        [outOfStock]="allOutOfStockNumber"
+        (selectedFilterRadioButtonChanged)="onFilterChanged($event)">
+    </app-filter>
+    <div *ngFor="let prod of products; let i = index">
+        <app-product  *ngIf="selectedFilterRadioButton === 'all' || prod.is_in_inventory.toString() === selectedFilterRadioButton" [product]="prod" [index]="i"></app-product>
     </div>
 </div>
