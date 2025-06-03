@@ -1,5 +1,5 @@
 <div class="search-product">
-    <input type="text" class="search-product-input" [(ngModel)]="searchText"/>
+    <input type="text" class="search-product-input" [(ngModel)]="searchText" (input)="onSearchTextChanged()"/>
     <button [ngClass]="{'btn': true, 'btn-search': (searchText !== ''), 'btn-search-disabled':(searchText === '')}" [disabled]="searchText === ''">Search</button>
 </div>
 <div class="search-result-for">

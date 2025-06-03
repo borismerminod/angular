@@ -23,6 +23,13 @@ export class ContainerComponent {
     inStock: 5
   }
 
+  searchText: string = ''
+
+  setSearchText(value : string)
+  {
+    this.searchText = value
+  }
+
   getDiscountedPrice()
   {
     return this.product.price - (this.product.price * this.product.discount / 100)

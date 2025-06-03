@@ -6,6 +6,7 @@
         (selectedFilterRadioButtonChanged)="onFilterChanged($event)">
     </app-filter>
     <div *ngFor="let prod of products; let i = index">
-        <app-product  *ngIf="selectedFilterRadioButton === 'all' || prod.is_in_inventory.toString() === selectedFilterRadioButton" [product]="prod" [index]="i"></app-product>
+        <!--<app-product  *ngIf="selectedFilterRadioButton === 'all' || prod.is_in_inventory.toString() === selectedFilterRadioButton" [product]="prod" [index]="i"></app-product>-->
+        <app-product  *ngIf="searchText === '' || prod.name.toLocaleLowerCase().includes(searchText)" [product]="prod" [index]="i"></app-product>
     </div>
 </div>
