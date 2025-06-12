@@ -1,6 +1,7 @@
 <div class="search-product">
-    <input type="text" class="search-product-input" [(ngModel)]="searchText" (input)="onSearchTextChanged()"/>
-    <button [ngClass]="{'btn': true, 'btn-search': (searchText !== ''), 'btn-search-disabled':(searchText === '')}" [disabled]="searchText === ''">Search</button>
+    <input type="text" class="search-product-input" #searchInput/>
+    <!--<button [ngClass]="{'btn': true, 'btn-search': (searchText !== ''), 'btn-search-disabled':(searchText === '')}" [disabled]="searchText === ''">Search</button> -->
+    <button class="btn btn-search" (click)="setSearchText()">Search</button>
 </div>
 <div class="search-result-for">
     <p *ngIf="searchText !==''">
