@@ -5,8 +5,17 @@
         [outOfStock]="allOutOfStockNumber"
         (selectedFilterRadioButtonChanged)="onFilterChanged($event)" >
     </app-filter>
-    <div *ngFor="let prod of products; let i = index" (click)="selectedProduct = prod">
+    <!--<div *ngFor="let prod of products; let i = index" (click)="selectedProduct = prod">-->
         <!--<app-product  *ngIf="selectedFilterRadioButton === 'all' || prod.is_in_inventory.toString() === selectedFilterRadioButton" [product]="prod" [index]="i"></app-product>-->
-        <app-product  *ngIf="searchText === '' || prod.name.toLocaleLowerCase().includes(searchText)" [product]="prod" [index]="i"></app-product>
-    </div>
+        <!--<app-product  *ngIf="searchText === '' || prod.name.toLocaleLowerCase().includes(searchText)" [product]="prod" [index]="i"></app-product>
+    </div> -->
+    <ng-container *ngFor="let prod of products; let i = index" >
+         <app-product  
+            *ngIf="searchText === '' || prod.name.toLocaleLowerCase().includes(searchText)" 
+            [product]="prod" 
+            [index]="i"
+            (click)="selectedProduct = prod"
+        >
+        </app-product>
+    </ng-container>
 </div>
