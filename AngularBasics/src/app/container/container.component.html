@@ -19,5 +19,24 @@
     </div>
     <product-list [searchText]="searchText" #productListComponent></product-list>
     <product-detail *ngIf="productListComponent.selectedProduct" [productListComp]="productListComponent"></product-detail>
+
+    <div class="featured-products">
+        <div class="featured-products-heading">
+            <h3>Latest arrivals in popular brands </h3>
+        </div>
+        <featured-brands>
+            <h3 class="title">New arrivals in Nike</h3>
+            <button class="call-to-action">Show new arrivals for Nike</button>
+        </featured-brands>
+        <featured-brands>
+            <h3 class="title">New arrivals in Reebok</h3>
+            <button class="call-to-action">Show new arrivals for Reebok</button>
+        </featured-brands>
+        <featured-brands>
+            <h3 class="title">New arrivals in Addidas</h3>
+            <button class="call-to-action">Show new arrivals for Addidas</button>
+        </featured-brands>
+
+    </div>
 </div>
  

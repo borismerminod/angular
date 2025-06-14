@@ -3,10 +3,11 @@ import { SearchComponent } from './search/search.component';
 import { CommonModule} from '@angular/common';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { FeaturedBrandsComponent } from './featured-brands/featured-brands.component';
 
 @Component({
   selector: 'app-container',
-  imports: [SearchComponent, CommonModule, ProductListComponent, ProductDetailComponent],
+  imports: [SearchComponent, CommonModule, ProductListComponent, ProductDetailComponent, FeaturedBrandsComponent],
   templateUrl: './container.component.html',
   styleUrl: './container.component.css'
 })

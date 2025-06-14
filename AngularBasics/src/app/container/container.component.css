@@ -9,3 +9,31 @@ button
     padding: 5px 10px;
     margin: 0px 5px;
 }
+
+.featured-products
+{
+    background-color : #282828;
+    padding: 20px 10px;
+    display: flex;
+}
+
+.featured-products-heading
+{
+    width: 320px;
+    margin: 10px 10px;
+    padding: 20px 30px;
+    color: #ffff;
+}
+
+.title, .description, .call-to-action
+{
+    margin: 10px 0px;
+}
+
+.call-to-action
+{
+    background-color: #282828;
+    color: #ffff;
+    width: 100px;
+    padding: 10px 0px;
+}
