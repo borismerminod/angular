@@ -3,9 +3,19 @@
     <child-component>
         <h1>Some heading</h1>
         <p #param>
-            Lorem ipsum dolor
+            Lorem ipsum dolor I
         </p>
-        <test-component></test-component>
+        <p #param>
+            Lorem ipsum dolor II
+        </p>
+        <p #param>
+            Lorem ipsum dolor III
+        </p>
+        <test-component [name]="'John Doe'"></test-component>
+        <test-component [name]="'Rafael Nadal'"></test-component>
+        <test-component [name]="'Roger Federer'"></test-component>
+        
+
     </child-component>
     <button (click)="ShowParagraphValue()">Show paragraph content</button>
 </div>
