@@ -1,4 +1,4 @@
-<div class="product-details-info scroll">
+<div class="product-details-info scroll" [disableProduct]="true">
         <div class="product-detail-close">
             <i class="fa fa-times" aria-hidden="true"></i>
         </div>
@@ -11,9 +11,9 @@
                 <h2>{{product.name}}</h2>
             </div>
             <div class="product-detail-gbc">
-                <span setBackground>{{product.gender}}</span>
-                <span setBackground>{{product.brand}}</span>
-                <span setBackground>{{product.category}}</span>
+                <span  [setBackground]="{backColor: 'red', textColor:'white'}">{{product.gender}}</span>
+                <span [setBackground]="{backColor: 'black', textColor:'white'}">{{product.brand}}</span>
+                <span  [setBackground]="{backColor: 'blue', textColor:'white'}">{{product.category}}</span>
             </div>
             <div class="product-detail-price">
                 <p>

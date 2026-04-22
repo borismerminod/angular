@@ -15,3 +15,9 @@ a{
     padding: 0 10px;
     color: #28282B
 }
+
+.disable-out-of-stock-product
+{
+    background-color: #28282B;
+    opacity: 0.5;
+}
